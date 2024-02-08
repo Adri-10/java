@@ -1,0 +1,24 @@
+
+package testmain;
+
+class Bird {
+    public void fly(){
+        System.out.println("The bird is flying.");
+    } 
+    public void fly(int height){
+        System.out.println("The bird is flying from "+ height+ " feet higher.");
+    }
+    public void fly(String name, int height){
+        System.out.println("The " + name + " is flying from " + height + " feet higher.");
+    }   
+}
+public class TestMain {
+    public static void main(String[] args) {
+        Bird myBird = new Bird();
+        myBird.fly();
+        myBird.fly(10000);
+        myBird.fly("Eagle", 20000);
+                
+    }
+}
+

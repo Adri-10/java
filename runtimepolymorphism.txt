@@ -1,0 +1,24 @@
+
+package testmain;
+
+class Animal {
+    public void eat(){
+        System.out.println("This animal eats food.");
+    }
+}
+class Bird extends Animal {
+    public void eat(){
+        System.out.println("Bird eats birdfoods.");
+    }
+}
+public class TestMain {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        myAnimal.eat();
+        Bird myBird = new Bird();
+        myBird.eat();
+        myAnimal = myBird;
+        myAnimal.eat();
+    }
+}
+

@@ -1,0 +1,51 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package testmain;
+
+class Animal {
+    private String name;
+    private double averageWeight;
+    private int numberOfLegs;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getAverageWeight() {
+        return averageWeight;
+    }
+
+    public void setAverageWeight(double averageWeight) {
+        this.averageWeight = averageWeight;
+    }
+
+    public int getNumberOfLegs() {
+        return numberOfLegs;
+    }
+
+    public void setNumberOfLegs(int numberOfLegs) {
+        this.numberOfLegs = numberOfLegs;
+    }
+}
+
+public class TestMain {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        
+        myAnimal.setName("Eagle");
+        myAnimal.setAverageWeight(1.8);
+        myAnimal.setNumberOfLegs(2);
+        
+        System.out.println("Name: "+ myAnimal.getName());
+        System.out.println("Average Weight: "+ myAnimal.getAverageWeight());
+        System.out.println("Number of Legs: "+ myAnimal.getNumberOfLegs());
+    }
+}
+

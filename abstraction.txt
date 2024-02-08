@@ -1,0 +1,74 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package testmain;
+
+abstract class Animal {
+    //abstract method
+    abstract void move();
+    abstract void eat();
+    
+    // concrete method
+    void label() {
+        System.out.println("Animal's Data: ");
+    }
+}
+class Bird extends Animal {
+
+    @Override
+    void move() {
+        System.out.println("Moves by flying.");
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    void eat() {
+        System.out.println("Eats birdfood.");
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+}
+
+class Fish extends Animal {
+
+    @Override
+    void move() {
+        System.out.println("Moves by swimming.");
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    void eat() {
+        System.out.println("Eats seafood.");
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+}
+public class TestMain {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //Animal an = new Animal();
+        Bird eagle = new Bird();
+        eagle.eat();
+        eagle.move();
+        
+        Fish shark = new Fish();
+        shark.eat();
+        shark.move();
+        
+        Animal an = eagle;
+        
+        an.eat();
+        an.move();
+        
+        an = shark;
+        
+        an.eat();
+        an.move();
+    }
+    
+}
+
